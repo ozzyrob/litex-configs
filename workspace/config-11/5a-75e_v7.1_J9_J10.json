@@ -1,0 +1,32 @@
+{
+    "board_name": "test-usr",
+    "board_type": "5A-75E v7.1",
+    "clock_frequency": 40000000,
+    "ethphy": {
+        "tx_delay": 0
+    },
+    "etherbone": {
+        "ip_address": "10.10.10.75",
+        "mac_address": "0x10e2d5000000"
+    },
+    "modules": [
+        {
+            "module_type": "gpio",
+            "instances": [
+                {"direction": "in",  "pin":"M13",  "name":"user_button"},
+                {"direction": "out",  "pin":"P11",  "name":"user_led"},
+                {"direction": "in",  "pin":"J9:1",  "name":"J9:1"},
+                {"direction": "in",  "pin":"J9:2",  "name":"J9:2"},
+                {"direction": "in",  "pin":"J9:3",  "name":"J9:3"},
+                {"direction": "in",  "pin":"J9:5",  "name":"J9:4"},
+                {"direction": "in",  "pin":"J9:6",  "name":"J9:5"},
+                {"direction": "in",  "pin":"J9:7",  "name":"J9:6"},
+                {"direction": "in",  "pin":"J10:1",  "name":"J10:1"},
+                {"direction": "in",  "pin":"J10:2",  "name":"J10:2"},
+                
+                
+               
+            ]
+        }
+    ]
+}

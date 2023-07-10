@@ -1,0 +1,42 @@
+{
+    "board_name": "test-J09",
+    "board_type": "5A-75E v7.1",
+    "clock_frequency": 40000000,
+    "ethphy": {
+        "tx_delay": 0
+    },
+    "etherbone": {
+        "ip_address": "10.10.10.75",
+        "mac_address": "0x10e2d5000000"
+    },
+    "modules": [
+        {
+            "module_type": "gpio",
+            "instances": [
+                {"direction": "in",   "pin":"M13",    "name":"user_button"},
+                {"direction": "out",  "pin":"P11",    "name":"user_led"},
+                {"direction": "in",   "pin":"j9:0",   "name":"J09:01"},
+                {"direction": "in",   "pin":"j9:1",   "name":"J09:02"},
+                {"direction": "in",   "pin":"j9:2",   "name":"J09:03"},
+                {"direction": "in",   "pin":"j9:4",   "name":"J09:05"},
+                {"direction": "in",   "pin":"j9:5",   "name":"J09:06"},
+                {"direction": "in",   "pin":"j9:6",   "name":"J09:07"},
+                {"direction": "out",  "pin":"j9:7",   "name":"J09:08"},
+                {"direction": "out",  "pin":"j9:8",   "name":"J09:09"},
+                {"direction": "out",  "pin":"j9:9",   "name":"J09:10"},
+                {"direction": "out",  "pin":"j9:10",  "name":"J09:11"},
+                {"direction": "out",  "pin":"j9:11",  "name":"J09:12"},
+                {"direction": "out",  "pin":"j9:12",  "name":"J09:13"},
+                {"direction": "out",  "pin":"j9:13",  "name":"J09:14"},
+                {"direction": "out",  "pin":"j9:14",  "name":"J09:15"},
+                {"direction": "in",   "pin":"j10:0",  "name":"J10:01"},
+                {"direction": "in",   "pin":"j10:1",  "name":"J10:02"}               
+                
+                
+                
+                
+               
+            ]
+        }
+    ]
+}

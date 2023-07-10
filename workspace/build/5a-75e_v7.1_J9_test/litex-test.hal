@@ -1,0 +1,78 @@
+loadusr -Wn litex-test pyvcp -c litex-test litex-test.xml
+loadrt litexcnc 
+loadrt litexcnc_eth connection_string="10.10.10.75" 
+loadrt threads name1=test-thread period1=50000000
+alias pin test-J9.gpio.00.in test-J9.gpio.user_button.in
+alias pin test-J9.gpio.00.in-not test-J9.gpio.user_button.in-not
+alias pin test-J9.gpio.01.out test-J9.gpio.user_led.out
+alias param test-J9.gpio.01.invert_output test-J9.gpio.user_led.invert_output
+alias pin test-J9.gpio.02.in test-J9.gpio.J09:01.in
+alias pin test-J9.gpio.02.in-not test-J9.gpio.J09:01.in-not
+alias pin test-J9.gpio.03.in test-J9.gpio.J09:02.in
+alias pin test-J9.gpio.03.in-not test-J9.gpio.J09:02.in-not
+alias pin test-J9.gpio.04.in test-J9.gpio.J09:03.in
+alias pin test-J9.gpio.04.in-not test-J9.gpio.J09:03.in-not
+alias pin test-J9.gpio.05.in test-J9.gpio.J09:05.in
+alias pin test-J9.gpio.05.in-not test-J9.gpio.J09:05.in-not
+alias pin test-J9.gpio.06.in test-J9.gpio.J09:06.in
+alias pin test-J9.gpio.06.in-not test-J9.gpio.J09:06.in-not
+alias pin test-J9.gpio.07.in test-J9.gpio.J09:07.in
+alias pin test-J9.gpio.07.in-not test-J9.gpio.J09:07.in-not
+alias pin test-J9.gpio.08.out test-J9.gpio.J09:08.out
+alias param test-J9.gpio.08.invert_output test-J9.gpio.J09:08.invert_output
+alias pin test-J9.gpio.09.out test-J9.gpio.J09:09.out
+alias param test-J9.gpio.09.invert_output test-J9.gpio.J09:09.invert_output
+alias pin test-J9.gpio.10.out test-J9.gpio.J09:10.out
+alias param test-J9.gpio.10.invert_output test-J9.gpio.J09:10.invert_output
+alias pin test-J9.gpio.11.out test-J9.gpio.J09:11.out
+alias param test-J9.gpio.11.invert_output test-J9.gpio.J09:11.invert_output
+alias pin test-J9.gpio.12.out test-J9.gpio.J09:12.out
+alias param test-J9.gpio.12.invert_output test-J9.gpio.J09:12.invert_output
+alias pin test-J9.gpio.13.out test-J9.gpio.J09:13.out
+alias param test-J9.gpio.13.invert_output test-J9.gpio.J09:13.invert_output
+alias pin test-J9.gpio.14.out test-J9.gpio.J09:14.out
+alias param test-J9.gpio.14.invert_output test-J9.gpio.J09:14.invert_output
+alias pin test-J9.gpio.15.out test-J9.gpio.J09:15.out
+alias param test-J9.gpio.15.invert_output test-J9.gpio.J09:15.invert_output
+alias pin test-J9.gpio.16.in test-J9.gpio.J10:01.in
+alias pin test-J9.gpio.16.in-not test-J9.gpio.J10:01.in-not
+alias pin test-J9.gpio.17.in test-J9.gpio.J10:02.in
+alias pin test-J9.gpio.17.in-not test-J9.gpio.J10:02.in-not
+
+addf test-J9.read test-thread
+addf test-J9.write test-thread
+net usr_light test-J9.gpio.user_button.in => test-J9.gpio.user_led.out
+#
+net J09-Pin-08 litex-test.btn08 test-J9.gpio.J09:08.out 
+net J09-Pin-08 litex-test.led-08
+#
+net J09-Pin-09 litex-test.btn09 test-J9.gpio.J09:09.out 
+net J09-Pin-09 litex-test.led-09
+#
+net J09-Pin-10 litex-test.btn10 test-J9.gpio.J09:10.out 
+net J09-Pin-10 litex-test.led-10
+#
+net J09-Pin-11 litex-test.btn11 test-J9.gpio.J09:11.out 
+net J09-Pin-11 litex-test.led-11
+#
+net J09-Pin-12 litex-test.btn12 test-J9.gpio.J09:12.out 
+net J09-Pin-12 litex-test.led-12
+#
+net J09-Pin-13 litex-test.btn13 test-J9.gpio.J09:13.out 
+net J09-Pin-13 litex-test.led-13
+#
+net J09-Pin-14 litex-test.btn14 test-J9.gpio.J09:14.out 
+net J09-Pin-14 litex-test.led-14
+#
+net J09-Pin-15 litex-test.btn15 test-J9.gpio.J09:15.out 
+net J09-Pin-15 litex-test.led-15
+#
+net J09-Pin-01 test-J9.gpio.J09:01.in litex-test.led-J09:01 
+net J09-Pin-02 test-J9.gpio.J09:02.in litex-test.led-J09:02 
+net J09-Pin-03 test-J9.gpio.J09:03.in litex-test.led-J09:03 
+net J09-Pin-05 test-J9.gpio.J09:05.in litex-test.led-J09:05 
+net J09-Pin-06 test-J9.gpio.J09:06.in litex-test.led-J09:06 
+net J09-Pin-07 test-J9.gpio.J09:07.in litex-test.led-J09:07
+net J10-Pin-01 test-J9.gpio.J10:01.in litex-test.led-J10:01 
+net J10-Pin-02 test-J9.gpio.J10:02.in litex-test.led-J10:02 
+start

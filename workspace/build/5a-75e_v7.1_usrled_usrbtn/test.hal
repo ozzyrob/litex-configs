@@ -1,0 +1,7 @@
+loadrt litexcnc 
+loadrt litexcnc_eth connection_string="10.10.10.75" 
+loadrt threads name1=test-thread period1=50000000 
+addf test-usr.read test-thread
+addf test-usr.write test-thread
+net light test-usr.gpio.00.in => test-usr.gpio.01.out
+start

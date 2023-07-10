@@ -1,0 +1,4 @@
+alias pin test-usr.gpio.00.in test-usr.gpio.user_button.in
+alias pin test-usr.gpio.00.in-not test-usr.gpio.user_button.in-not
+alias pin test-usr.gpio.01.out test-usr.gpio.user_led.out
+alias param test-usr.gpio.01.invert_output test-usr.gpio.user_led.invert_output

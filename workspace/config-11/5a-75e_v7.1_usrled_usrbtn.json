@@ -1,0 +1,21 @@
+{
+    "board_name": "test-usr",
+    "board_type": "5A-75E v7.1",
+    "clock_frequency": 40000000,
+    "ethphy": {
+        "tx_delay": 0
+    },
+    "etherbone": {
+        "ip_address": "10.10.10.75",
+        "mac_address": "0x10e2d5000000"
+    },
+    "modules": [
+        {
+            "module_type": "gpio",
+            "instances": [
+                {"direction": "in",  "pin":"M13",  "name":"user_button"},
+                {"direction": "out",  "pin":"P11",  "name":"user_led"}
+            ]
+        }
+    ]
+}
